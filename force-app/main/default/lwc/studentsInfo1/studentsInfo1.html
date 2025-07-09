@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Students Info">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="8">
+                <ul>
+                    <template for:each={studentsInfoParent} for:item="student">
+                        <li key={student.rollno}> {student.rollno}
+                            <!-- <c-students-info student-info={student}></c-students-info> -->
+                        </li>
+                        <!-- <li key={student.name}> {student.name}</li> -->
+                    </template>
+                        
+                </ul>
+                
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

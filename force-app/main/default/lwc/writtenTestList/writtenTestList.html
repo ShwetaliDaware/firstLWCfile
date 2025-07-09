@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Written Test show Records">
+        <template if:true={writtenTests}>
+            <lightning-datatable key-field="Id"
+                data={writtenTests}
+                columns={columns}
+                hide-checkbox-column
+                class="slds-m-around_medium">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <p class="slds-text-color_error">Error loading data: {error}</p>
+        </template>
+    </lightning-card>
+</template>

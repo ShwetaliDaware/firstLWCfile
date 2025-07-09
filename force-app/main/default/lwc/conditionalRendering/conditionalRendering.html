@@ -1,0 +1,25 @@
+<template>
+<lightning-card title="Conditional Rendering">
+    <lightning-input type="checkbox" label="Click Me see the Magic" onchange={showDivHandler}></lightning-input>
+<template if:true={dispayDiv}>
+    <div> I am here... Click again to Hide Me. </div>
+</template>  
+<template if:false={dispayDiv}>
+    <div> Click Me. </div>
+</template> 
+</lightning-card>
+
+<lightning-card>
+    <div><lightning-input type="text" onchange={changeHandler}></lightning-input></div>
+    <template lwc:if = {isMorning} >
+        <p> Good Morning India </p>
+    </template>  
+    <template lwc:elseif = {isAfternoon}>
+        <p> Good Afternoon India  </p>
+    </template> 
+    <template lwc:else>
+        <p> Good Evening India  </p>
+    </template>
+
+</lightning-card>
+</template>

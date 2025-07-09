@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Written Test Details">
+        <lightning-input label="Username Name" value={candidateName} onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Password" type="password" value={password} onchange={handleScoreChange}></lightning-input>
+
+        <div class="slds-m-top_medium">
+            <lightning-button variant="brand" label="Record Details" onclick={recordDetails}></lightning-button>
+            <lightning-button variant="neutral" label="Show Details" onclick={showDetails} class="slds-m-left_small"></lightning-button>
+        </div>
+
+        <template if:true={showResult}>
+            <p class="slds-m-top_medium"><b>Name:</b> {candidateName}</p>
+            <p><b>PAssword:</b> {score}</p>
+        </template>
+    </lightning-card>
+</template>

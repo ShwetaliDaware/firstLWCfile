@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="User Login">
+        <lightning-input label="Username" value={username} onchange={handleUsernameChange}></lightning-input>
+        <lightning-input label="Password" type="password" value={password} onchange={handlePasswordChange}></lightning-input>
+        
+        <div class="slds-m-top_medium">
+            <lightning-button variant="brand" label="Register" onclick={handleRegister}></lightning-button>
+            <lightning-button variant="neutral" label="Login" onclick={loginUser} class="slds-m-left_small"></lightning-button>
+        </div>
+    </lightning-card>
+    <template if:true={isFormVisible}>
+            <c-user-registration></c-user-registration>
+        </template>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="life cycle Hooks">
+        <lightning-button variant="brand" label="Click me to see Callback" onclick={clickHandler}></lightning-button>"
+       
+        <template if:true={showChildTemplate}>
+            <c-lwc-life-cycle-child-c-m-p> </c-lwc-life-cycle-child-c-m-p>  
+        </template>
+    </lightning-card>
+</template>

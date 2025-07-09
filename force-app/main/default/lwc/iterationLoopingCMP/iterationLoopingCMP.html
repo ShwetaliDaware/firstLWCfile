@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Iterarion and Looping" >
+
+      <template for:each={language} for:item="lang">
+       <div key={lang}> {lang}</div>
+      </template>
+
+      <h1> Example of Ietrator directive</h1>
+      <template iterator:it={language}>
+        <template if:true={it.first}>
+         first element {it.value}
+        </template> 
+
+      </template>
+    </lightning-card>
+</template>

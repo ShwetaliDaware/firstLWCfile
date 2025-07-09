@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-tile label={studentInfo.Name} onclick={tileClickHandler}>
+                <p class="slds-truncate" title={studentInfo.rollno}> {studentInfo.age}</p>
+            </lightning-tile>
+        </div>  
+        
+       <!--   <div class="slds-p-around_medium lgc-bg">
+       //this is named slot  //  slot are not duplicate  
+            <slot name="studentInfo"></slot>
+            <slot></slot>   //this is un-named slot
+        </div>-->
+    </lightning-card>
+</template>

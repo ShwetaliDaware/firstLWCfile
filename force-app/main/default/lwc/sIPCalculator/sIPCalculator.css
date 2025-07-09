@@ -1,0 +1,4 @@
+.ring-wrapper {
+    transform: scale(3);  /* Change scale as needed */
+    transform-origin: center;
+}

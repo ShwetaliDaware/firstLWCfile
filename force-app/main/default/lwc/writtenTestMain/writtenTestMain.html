@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Written Test Module">
+        <div class="slds-m-bottom_medium">
+            <lightning-button-group>
+                <lightning-button label="New Record" onclick={showForm}></lightning-button>
+                <lightning-button label="Show Details" onclick={showList}></lightning-button>
+            </lightning-button-group>
+        </div>
+
+        <template if:true={isFormVisible}>
+            <c-written-test-form></c-written-test-form>
+        </template>
+
+        <template if:true={isListVisible}>
+            <c-written-test-list></c-written-test-list>
+        </template>
+    </lightning-card>
+</template>

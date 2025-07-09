@@ -1,0 +1,44 @@
+<template>
+<lightning-card title="student info">
+    <lightning-layout multiple-rows>
+        <!--  <lightning-layout-item size="8">
+        <ul>
+            <template for:each={studentsInfo} for:item="student" >
+                <li key={student.Name}>
+                    <c-Student-info-child student-info ={student} ontileclick={tileSelectedHandler}>
+                      <lightning-tile slot="studentInfo" label={student.Name}>
+                             <p class="slds-truncate" title={student.rollno}> {student.age}</p>
+                         </lightning-tile>
+                         <div>
+                            additional markup will seat in unamed slot
+                            <lightning-input label="student data"></lightning-input> 
+                            <lightning-button variant="brand" label="submit"></lightning-button>
+                         </div>
+                    </c-Student-info-child>
+                </li>
+            </template>
+        </ul>
+        </lightning-layout-item>-->
+<lightning-layout-item size="8">
+        <ul>
+            <template for:each={studentsInfo} for:item="student" >
+                <li key={student.Name}>
+                    <c-Student-info-child student-info ={student}>
+                                         
+                    </c-Student-info-child>
+                </li>
+            </template>
+        </ul>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" size="4">
+        <strong> You have selected: {selectedStudInfo}</strong>
+        <p> Name: {selectedName}</p>
+        <p> Roll No : {selectedRollno}</p>
+        <p> Age : {selectedAge}</p>
+    </lightning-layout-item>
+       
+    </lightning-layout>
+    
+</lightning-card>
+</template>

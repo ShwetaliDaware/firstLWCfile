@@ -1,0 +1,64 @@
+<!-- <template>
+<lightning-card title="Calculator">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item padding="around_small" size="8">
+            <lightning-input type ="text" label="First Number" value={firstNumber} onchange={inpputHandler}></lightning-input>
+            <lightning-input type ="text" label="Second Number" value={secondNumber} onchange={inpputHandler}></lightning-input>
+        </lightning-layout-item>    
+
+                <lightning-layout-item padding="around_small" size="12">
+                    <lightning-input label={output} value={result} disabled></lightning-input>
+                </lightning-layout-item>
+
+        <lightning-layout-item padding="around_small" size="12">
+            <lightning-button-group>
+                <lightning-button variant="brand" label="Add" onclick={addHandler}></lightning-button>    
+                <lightning-button variant="brand" label="Substract" onclick={subHandler}></lightning-button> 
+                <lightning-button variant="brand" label="Multiply" onclick={mulHandler}></lightning-button> 
+                <lightning-button variant="brand" label="Divide" onclick={divHandler}></lightning-button> 
+            </lightning-button-group>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</lightning-card>
+
+</template> -->
+
+<template>
+    <lightning-card title="Enhanced Calculator" icon-name="utility:formula">
+        <lightning-layout multiple-rows>
+
+             <lightning-layout-item size="12" padding="around_small">
+                <lightning-input type="number" label="First Number" value={firstNumber} onchange={inpChangeHandler}></lightning-input>
+            </lightning-layout-item>
+
+             <lightning-layout-item size="12" padding="around_small">
+                <lightning-input type="number" label="Second Number" value={secondNumber} onchange={inpChangeHandler}></lightning-input>
+            </lightning-layout-item>
+
+             <lightning-layout-item size="12" padding="around_small">
+                <lightning-input label="Result" value={result} disabled></lightning-input>
+            </lightning-layout-item>
+
+             <lightning-layout-item size="12" padding="around_small">
+                <lightning-button-group>
+                    <lightning-button label="Addition" onclick={addHandler} variant="brand"></lightning-button>
+                    <lightning-button label="Substract" onclick={subHandler} variant="brand"></lightning-button>
+                    <lightning-button label="Multiply" onclick={mulHandler} variant="brand"></lightning-button>
+                    <lightning-button label="Divide" onclick={divHandler} variant="brand"></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+
+             <lightning-layout-item size="12" padding="around_small">
+                <lightning-input type="checkbox" label="SHOW HISTORY" checked={showHistory} onchange={toggleHistory} class="yellow-label"></lightning-input>
+            </lightning-layout-item>
+
+             <template if:true={showHistory}>
+                <lightning-layout-item size="12" padding="around_small">
+                    <lightning-formatted-rich-text value={historyText}></lightning-formatted-rich-text>
+                </lightning-layout-item>
+            </template>
+
+        </lightning-layout>
+    </lightning-card>
+</template>

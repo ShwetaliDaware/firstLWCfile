@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="LDS ">
+        <lightning-input label ="Name" type="text" onchange={changeHandler}></lightning-input>
+        <lightning-input label ="Stage Name"  type="text" onchange={changeHandler}></lightning-input>
+        <lightning-input label ="Close Date"  type="date" onchange={changeHandler}></lightning-input>
+        
+        <lightning-button variant="brand" label="Create Opportunity" onclick={onClickHandler}></lightning-button>
+    </lightning-card>
+</template>

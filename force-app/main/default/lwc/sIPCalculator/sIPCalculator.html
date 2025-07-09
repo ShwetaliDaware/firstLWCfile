@@ -1,0 +1,49 @@
+<!-- <template>
+    <lightning-card title="SIP Calculator">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Monthly Investment (₹)" type="number" value={monthlyInvestment} onchange={handleMonthlyChange}></lightning-input>
+            <lightning-input label="Expected Annual Return Rate (%)" type="number" value={annualRate} onchange={handleRateChange}></lightning-input>
+            <lightning-input label="Investment Duration (Years)" type="number" value={durationYears} onchange={handleDurationChange}></lightning-input>
+
+            <lightning-button label="Calculate" variant="brand" class="slds-m-top_medium" onclick={calculateSIP}></lightning-button>
+
+            <template if:true={futureValue}>
+                <p class="slds-m-top_medium">
+                    <strong>Future Value: ₹ {futureValue}</strong>
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template> -->
+
+<template>
+    <!-- <lightning-card title="Sip Calculator">
+    <div class="slds-m-bottom_medium">
+        <lightning-slider onchange={sliderChange} value={sliderValue} label="Value"
+        ></lightning-slider>
+    </div>
+   
+     <div class="slds-grid slds-grid_align-center">
+            <div style="height: 250px; width: 250px;" >
+            <span class="slds-m-right_small"> variant: base-autocomplete </span>
+        <lightning-progress-ring value={sliderValue} direction={direction} variant="base-autocomplete" radius="80" ></lightning-progress-ring>
+    </div>
+    </div>
+
+    <div class="slds-m-bottom_small">
+        <span class="slds-m-right_small"> variant: active-step </span>
+        <lightning-progress-ring value={sliderValue} direction={direction} variant="active-step" ></lightning-progress-ring>
+    </div>
+    </lightning-card> -->
+
+      <lightning-card title="Large Progress Ring (Scaled)">
+        <div class="slds-grid slds-grid_align-center">
+            <div class="ring-wrapper">
+                <lightning-progress-ring value="75" variant="base-autofill"></lightning-progress-ring>
+            </div>
+        </div>
+    </lightning-card>
+    
+     
+</template>
+
